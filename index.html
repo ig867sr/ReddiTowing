@@ -74,9 +74,9 @@
             min-height: 170px;
             margin: 0 auto;
             padding: 0.75rem 0;
-            grid-template-columns: 150px minmax(0, 1fr) 350px;
+            grid-template-columns: minmax(0, 1fr) minmax(0, 500px) minmax(0, 1fr);
             align-items: center;
-            column-gap: 1rem;
+            column-gap: 1.5rem;
         }
 
         .brand {
@@ -86,12 +86,10 @@
             justify-self: center;
         }
 
-        .brand-gorge {
-            grid-column: 1;
-        }
-
-        .brand-wordmark {
+        .brand-logo {
             grid-column: 2;
+            width: 100%;
+            z-index: 1;
         }
 
         .brand img {
@@ -99,32 +97,27 @@
             height: auto;
         }
 
-        .brand-gorge img {
-            width: min(100%, 190px);
-        }
-
-        .brand-wordmark img {
-            width: 100%;
-        }
-
-        .brand-wordmark {
+        .brand-logo img {
             width: 100%;
         }
 
         .header-details {
             display: flex;
-            grid-column: 3;
+            grid-column: 1 / -1;
             grid-row: 1;
             align-items: center;
-            justify-content: flex-end;
-            justify-self: end;
-            gap: 1rem;
+            justify-content: space-between;
         }
 
         .header-detail {
             display: grid;
-            flex: 0 0 auto;
+            min-width: 0;
+            flex: 1 1 0;
             gap: 0.1rem;
+        }
+
+        .header-detail:last-child {
+            text-align: right;
         }
 
         .header-label {
@@ -364,7 +357,7 @@
             color: var(--white);
         }
 
-        @media (max-width: 900px) {
+        @media (max-width: 1000px) {
             .header-inner {
                 width: min(100% - 2rem, var(--content-width));
                 min-height: auto;
@@ -379,25 +372,20 @@
                 justify-self: center;
             }
 
-            .brand-gorge {
-                display: none;
-            }
-
-            .brand-wordmark img {
+            .brand-logo {
                 width: min(500px, 90vw);
-            }
-
-            .brand-wordmark {
-                width: auto;
             }
 
             .header-details {
                 grid-column: 1;
                 grid-row: 2;
-                justify-self: center;
                 align-items: flex-start;
                 justify-content: center;
                 gap: clamp(1rem, 6vw, 3rem);
+            }
+
+            .header-detail:last-child {
+                text-align: left;
             }
         }
 
@@ -477,11 +465,8 @@
 
     <header class="site-header">
         <div class="header-inner">
-            <div class="brand brand-gorge" aria-hidden="true">
-                <img src="assets/logos/option-3-flatbed.svg" alt="" aria-hidden="true">
-            </div>
-            <a class="brand brand-wordmark" href="/" aria-label="Reddi Towing home">
-                <img src="assets/logos/wordmark.svg" alt="Reddi Towing">
+            <a class="brand brand-logo" href="/" aria-label="Reddi Towing home">
+                <img src="assets/logos/option-3-flatbed.svg" alt="Reddi Towing">
             </a>
             <div class="header-details">
                 <div class="header-detail">
