@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 240" role="img" aria-labelledby="title description">
+  <title id="title">Reddi Towing</title>
+  <desc id="description">The centered Reddi Towing wordmark, with dark-blue REDDI and orange-red TOWING over a soft faded blue glow.</desc>
+  <defs>
+    <radialGradient id="blueFade" cx="50%" cy="50%" r="70%">
+      <stop offset="0" stop-color="#d9eff8" stop-opacity=".96"/>
+      <stop offset=".48" stop-color="#9bc9df" stop-opacity=".68"/>
+      <stop offset="1" stop-color="#477da4" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <path d="M0 0h1000v240H0z" fill="url(#blueFade)"/>
+  <g font-family="Arial, Helvetica, sans-serif" text-anchor="middle" font-style="italic" font-weight="900">
+    <text x="500" y="130" fill="#10264a" stroke="#d9eff8" stroke-opacity=".9" stroke-width="2.5" paint-order="stroke" font-size="108" letter-spacing="3">REDDI</text>
+    <text x="500" y="195" fill="#e05236" font-size="53" letter-spacing="18">TOWING</text>
+  </g>
+</svg>

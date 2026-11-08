@@ -13,7 +13,7 @@ $indexPath = Join-Path $PSScriptRoot 'index.html'
 if (-not (Test-Path -LiteralPath $indexPath -PathType Leaf)) {
     throw "Website homepage not found: $indexPath"
 }
-$logoPath = Join-Path $PSScriptRoot 'assets\logos\option-3-flatbed.svg'
+$logoPath = Join-Path $PSScriptRoot 'assets\logos\wordmark.svg'
 if (-not (Test-Path -LiteralPath $logoPath -PathType Leaf)) {
     throw "Website logo not found: $logoPath"
 }
@@ -35,7 +35,7 @@ if ($LASTEXITCODE -ne 0) {
     throw "Cannot access S3 bucket '$Bucket' in region '$Region' with profile '$Profile'."
 }
 
-$logoDestination = "s3://$Bucket/assets/logos/option-3-flatbed.svg"
+$logoDestination = "s3://$Bucket/assets/logos/wordmark.svg"
 if ($PSCmdlet.ShouldProcess($logoDestination, 'Upload website logo')) {
     & aws s3 cp $logoPath $logoDestination `
         --content-type 'image/svg+xml' `
@@ -63,7 +63,7 @@ if ($DistributionId) {
     if ($PSCmdlet.ShouldProcess("CloudFront distribution $DistributionId", 'Invalidate homepage cache')) {
         & aws cloudfront create-invalidation `
             --distribution-id $DistributionId `
-            --paths '/index.html' '/' '/assets/logos/option-3-flatbed.svg' `
+            --paths '/index.html' '/' '/assets/logos/wordmark.svg' `
             --profile $Profile
         if ($LASTEXITCODE -ne 0) {
             throw "CloudFront invalidation failed for distribution '$DistributionId'."

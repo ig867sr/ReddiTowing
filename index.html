@@ -69,37 +69,61 @@
         }
 
         .header-inner {
-            display: flex;
+            display: grid;
             width: min(100% - 3rem, var(--content-width));
-            min-height: 112px;
+            min-height: 170px;
             margin: 0 auto;
+            padding: 0.75rem 0;
+            grid-template-columns: 150px minmax(0, 1fr) 350px;
             align-items: center;
-            justify-content: space-between;
-            gap: 2rem;
+            column-gap: 1rem;
         }
 
         .brand {
             display: inline-flex;
-            flex: 0 0 auto;
+            grid-row: 1;
             align-items: center;
+            justify-self: center;
+        }
+
+        .brand-gorge {
+            grid-column: 1;
+        }
+
+        .brand-wordmark {
+            grid-column: 2;
         }
 
         .brand img {
             display: block;
-            width: 250px;
             height: auto;
+        }
+
+        .brand-gorge img {
+            width: min(100%, 190px);
+        }
+
+        .brand-wordmark img {
+            width: 100%;
+        }
+
+        .brand-wordmark {
+            width: 100%;
         }
 
         .header-details {
             display: flex;
-            flex: 1;
+            grid-column: 3;
+            grid-row: 1;
             align-items: center;
             justify-content: flex-end;
-            gap: clamp(1.25rem, 3vw, 3rem);
+            justify-self: end;
+            gap: 1rem;
         }
 
         .header-detail {
             display: grid;
+            flex: 0 0 auto;
             gap: 0.1rem;
         }
 
@@ -108,6 +132,7 @@
             font-size: 0.72rem;
             font-weight: 700;
             letter-spacing: 0.1em;
+            white-space: nowrap;
             text-transform: uppercase;
         }
 
@@ -339,31 +364,44 @@
             color: var(--white);
         }
 
-        @media (max-width: 760px) {
+        @media (max-width: 900px) {
             .header-inner {
                 width: min(100% - 2rem, var(--content-width));
                 min-height: auto;
                 padding: 1rem 0;
-                flex-direction: column;
-                align-items: stretch;
+                grid-template-columns: minmax(0, 1fr);
                 gap: 1rem;
             }
 
             .brand {
-                align-self: flex-start;
+                grid-column: 1;
+                grid-row: 1;
+                justify-self: center;
             }
 
-            .brand img {
-                width: min(250px, 72vw);
+            .brand-gorge {
+                display: none;
+            }
+
+            .brand-wordmark img {
+                width: min(500px, 90vw);
+            }
+
+            .brand-wordmark {
+                width: auto;
             }
 
             .header-details {
+                grid-column: 1;
+                grid-row: 2;
+                justify-self: center;
                 align-items: flex-start;
-                flex-direction: column;
-                justify-content: flex-start;
-                gap: 0.75rem;
+                justify-content: center;
+                gap: clamp(1rem, 6vw, 3rem);
             }
+        }
 
+        @media (max-width: 760px) {
             .header-phone {
                 font-size: 1.05rem;
             }
@@ -411,6 +449,11 @@
         }
 
         @media (max-width: 380px) {
+            .header-details {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+
             .emergency-banner {
                 font-size: 0.75rem;
             }
@@ -434,8 +477,11 @@
 
     <header class="site-header">
         <div class="header-inner">
-            <a class="brand" href="/" aria-label="Reddi Towing home">
-                <img src="assets/logos/option-3-flatbed.svg" alt="Reddi Towing — Columbia River Gorge">
+            <div class="brand brand-gorge" aria-hidden="true">
+                <img src="assets/logos/option-3-flatbed.svg" alt="" aria-hidden="true">
+            </div>
+            <a class="brand brand-wordmark" href="/" aria-label="Reddi Towing home">
+                <img src="assets/logos/wordmark.svg" alt="Reddi Towing">
             </a>
             <div class="header-details">
                 <div class="header-detail">
@@ -456,7 +502,7 @@
         <section class="hero" aria-labelledby="hero-title">
             <div class="hero-inner">
                 <div class="hero-copy">
-                    <p class="eyebrow">Carson, Washington · Columbia River Gorge</p>
+                    <p class="eyebrow">Carson, WA · Columbia River Gorge</p>
                     <h1 id="hero-title">Need a hand? We’re on the way.</h1>
                     <p class="hero-description">From lockouts and flat tires to towing and recovery, call your local crew for roadside help, day or night.</p>
                     <div class="hero-actions">

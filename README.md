@@ -10,7 +10,7 @@ existing `images/` objects from the same origin.
 ## Deploy the homepage
 
 The deployment script uploads `index.html` and the SVG logo at
-`assets/logos/option-3-flatbed.svg`; it does not delete or replace the existing
+`assets/logos/wordmark.svg`; it does not delete or replace the existing
 images. When a CloudFront distribution ID is configured, it also invalidates
 the homepage and logo paths so visitors receive the update.
 
