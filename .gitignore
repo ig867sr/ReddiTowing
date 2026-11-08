@@ -1,0 +1,7 @@
+.env
+.env.*
+!.env.example
+.aws/
+*.log
+Thumbs.db
+Desktop.ini
