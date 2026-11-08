@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A stylized Reddi Towing wordmark with white Gorge mountains and a faded blue Columbia River, without a truck illustration.">
+    <title>Reddi Towing — Logo Concepts</title>
+    <style>
+        :root {
+            color-scheme: light;
+            --navy: #14264a;
+            --red: #f26a21;
+            --gold: #1687a3;
+            --ink: #1c2738;
+            --muted: #647084;
+            --paper: #f2f4f7;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--paper);
+            color: var(--ink);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        main {
+            width: min(100% - 2rem, 1100px);
+            margin: 0 auto;
+            padding: clamp(2rem, 6vw, 4rem) 0;
+        }
+
+        .intro {
+            margin-bottom: 2rem;
+        }
+
+        .intro p {
+            margin: 0 0 0.4rem;
+            color: var(--red);
+            font-size: 0.75rem;
+            font-weight: 800;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            margin: 0;
+            color: var(--navy);
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            letter-spacing: -0.04em;
+        }
+
+        .intro .note {
+            max-width: 650px;
+            margin-top: 0.8rem;
+            color: var(--muted);
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .concepts {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .concept {
+            overflow: hidden;
+            border: 1px solid #e1e5eb;
+            border-radius: 0.8rem;
+            background: #fff;
+            box-shadow: 0 12px 30px rgb(21 39 68 / 6%);
+        }
+
+        .concept-heading {
+            display: flex;
+            padding: 1rem 1.3rem 0.4rem;
+            align-items: baseline;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .concept-heading h2 {
+            margin: 0;
+            color: var(--navy);
+            font-size: 1rem;
+        }
+
+        .concept-heading span {
+            color: var(--muted);
+            font-size: 0.85rem;
+            text-align: right;
+        }
+
+        .logo-preview {
+            padding: 0.5rem clamp(0.75rem, 3vw, 2rem) 1.25rem;
+        }
+
+        .logo-preview img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .header-preview {
+            display: grid;
+            padding: clamp(1.25rem, 3vw, 2rem);
+            grid-template-columns: minmax(0, 1fr) 180px;
+            align-items: center;
+            gap: 1.5rem;
+            background: #14264a;
+        }
+
+        .header-preview .logo-plate-sky {
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+        .header-preview .logo-plate-white {
+            grid-column: 1;
+            grid-row: 2;
+        }
+
+        .logo-plate {
+            min-width: 0;
+            padding: 0.6rem 0.8rem;
+            border-radius: 0.45rem;
+            background: #cfe7f3;
+        }
+
+        .logo-plate img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .logo-plate-sky {
+            background: #14264a;
+        }
+
+        .logo-plate-white {
+            background: #fff;
+        }
+
+        .header-contact {
+            display: grid;
+            grid-column: 2;
+            grid-row: 1 / span 2;
+            align-content: center;
+            gap: 0.15rem;
+            color: #d3ddf0;
+            font-size: 0.85rem;
+        }
+
+        .header-contact strong {
+            color: #ffc247;
+            font-size: 1.05rem;
+        }
+
+        .palette {
+            display: flex;
+            padding: 0 1.3rem 1rem;
+            align-items: center;
+            gap: 0.4rem;
+            color: var(--muted);
+            font-size: 0.75rem;
+        }
+
+        .swatch {
+            width: 0.8rem;
+            height: 0.8rem;
+            border-radius: 50%;
+        }
+
+        .navy { background: var(--navy); }
+        .red { background: var(--red); }
+        .gold { background: var(--gold); }
+
+        @media (max-width: 560px) {
+            .concept-heading {
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 0.2rem;
+            }
+
+            .concept-heading span {
+                text-align: left;
+            }
+
+            .header-preview {
+                grid-template-columns: minmax(0, 1fr);
+                gap: 0.8rem;
+            }
+
+            .header-contact {
+                grid-column: 1;
+                grid-row: 3;
+                padding-left: 0.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header class="intro">
+            <p>Website logo · header placement</p>
+            <h1>Gorge wordmark.</h1>
+            <div class="note">The stylized direction, now with fuller evergreen coverage on the mountain slopes: white peaks above REDDI/TOWING and the faded Columbia River below. This top navy-background treatment is used in the homepage header.</div>
+        </header>
+
+        <div class="concepts">
+            <section class="concept" aria-labelledby="gorge-title">
+                <div class="concept-heading">
+                    <h2 id="gorge-title">Stylized Gorge wordmark</h2>
+                    <span>Snowy peaks · fuller evergreens · wordmark · river</span>
+                </div>
+                <div class="header-preview">
+                    <div class="logo-plate logo-plate-sky">
+                        <img src="option-3-flatbed.svg" alt="Stylized Reddi Towing wordmark with white Gorge peaks, fuller green evergreen trees, and faded Columbia River">
+                    </div>
+                    <div class="logo-plate logo-plate-white">
+                        <img src="option-3-flatbed.svg" alt="Stylized Reddi Towing wordmark with snowy Gorge peaks, fuller green evergreen trees, and river on white">
+                    </div>
+                    <div class="header-contact">
+                        <strong>(509) 427-8111</strong>
+                        <span>71 Carson Frontage Rd</span>
+                        <span>Carson, WA 98610</span>
+                    </div>
+                </div>
+                <div class="palette"><span class="swatch navy"></span><span class="swatch red"></span><span class="swatch gold"></span><span>Website navy · towing red · river blue</span></div>
+            </section>
+        </div>
+    </main>
+</body>
+</html>

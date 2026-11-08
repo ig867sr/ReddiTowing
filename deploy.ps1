@@ -13,6 +13,10 @@ $indexPath = Join-Path $PSScriptRoot 'index.html'
 if (-not (Test-Path -LiteralPath $indexPath -PathType Leaf)) {
     throw "Website homepage not found: $indexPath"
 }
+$logoPath = Join-Path $PSScriptRoot 'assets\logos\option-3-flatbed.svg'
+if (-not (Test-Path -LiteralPath $logoPath -PathType Leaf)) {
+    throw "Website logo not found: $logoPath"
+}
 
 if (-not (Get-Command aws -ErrorAction SilentlyContinue)) {
     throw 'AWS CLI was not found. Install AWS CLI v2 and try again.'
@@ -31,15 +35,27 @@ if ($LASTEXITCODE -ne 0) {
     throw "Cannot access S3 bucket '$Bucket' in region '$Region' with profile '$Profile'."
 }
 
-$destination = "s3://$Bucket/index.html"
-if ($PSCmdlet.ShouldProcess($destination, 'Upload index.html')) {
-    & aws s3 cp $indexPath $destination `
+$logoDestination = "s3://$Bucket/assets/logos/option-3-flatbed.svg"
+if ($PSCmdlet.ShouldProcess($logoDestination, 'Upload website logo')) {
+    & aws s3 cp $logoPath $logoDestination `
+        --content-type 'image/svg+xml' `
+        --cache-control 'no-cache' `
+        --profile $Profile `
+        --region $Region
+    if ($LASTEXITCODE -ne 0) {
+        throw "Upload to '$logoDestination' failed."
+    }
+}
+
+$indexDestination = "s3://$Bucket/index.html"
+if ($PSCmdlet.ShouldProcess($indexDestination, 'Upload index.html')) {
+    & aws s3 cp $indexPath $indexDestination `
         --content-type 'text/html; charset=utf-8' `
         --cache-control 'no-cache' `
         --profile $Profile `
         --region $Region
     if ($LASTEXITCODE -ne 0) {
-        throw "Upload to '$destination' failed."
+        throw "Upload to '$indexDestination' failed."
     }
 }
 
@@ -47,7 +63,7 @@ if ($DistributionId) {
     if ($PSCmdlet.ShouldProcess("CloudFront distribution $DistributionId", 'Invalidate homepage cache')) {
         & aws cloudfront create-invalidation `
             --distribution-id $DistributionId `
-            --paths '/index.html' '/' `
+            --paths '/index.html' '/' '/assets/logos/option-3-flatbed.svg' `
             --profile $Profile
         if ($LASTEXITCODE -ne 0) {
             throw "CloudFront invalidation failed for distribution '$DistributionId'."

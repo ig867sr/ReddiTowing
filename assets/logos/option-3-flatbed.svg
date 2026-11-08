@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 380" role="img" aria-labelledby="title description">
+  <title id="title">Reddi Towing — Columbia River Gorge</title>
+  <desc id="description">A stylized Reddi Towing wordmark with evergreen trees on the Gorge mountains, white snowcaps, and a faded blue Columbia River below, with no truck illustration.</desc>
+  <defs>
+    <linearGradient id="mountainSnow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#d8eaf2"/>
+    </linearGradient>
+    <radialGradient id="wordFade" gradientUnits="userSpaceOnUse" cx="500" cy="270" r="290">
+      <stop offset="0" stop-color="#dceef6" stop-opacity=".95"/>
+      <stop offset=".55" stop-color="#a9cadd" stop-opacity=".62"/>
+      <stop offset="1" stop-color="#a9cadd" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="river" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b9e8f2" stop-opacity=".95"/>
+      <stop offset=".46" stop-color="#39a4c4" stop-opacity=".85"/>
+      <stop offset="1" stop-color="#147294" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <g stroke="#b7d0de" stroke-width="2.5" stroke-linejoin="round">
+    <path d="m105 170 142-93 73 54L409 34l114 116 96-92 82 92 70-61 126 81z" fill="url(#mountainSnow)"/>
+    <path d="m359 82 50-48 54 55-26-10-19 13-21-19-17 16z" fill="#fff"/>
+    <path d="m588 94 31-36 35 33-22-9-13 12-15-13z" fill="#fff"/>
+  </g>
+  <g fill="#315a46" stroke="#274b3a" stroke-width="2" stroke-linejoin="round">
+    <path d="m137 167 10-18-5 0 11-18 11 18-5 0 10 18z"/>
+    <path d="m174 166 13-23-6 0 12-20 12 20-6 0 13 23z"/>
+    <path d="m244 165 9-17-4 0 10-17 10 17-5 0 9 17z"/>
+    <path d="m207 166 10-19-5 0 11-18 11 18-5 0 10 19z"/>
+    <path d="m304 165 9-17-4 0 10-17 10 17-5 0 9 17z"/>
+    <path d="m282 166 11-20-5 0 11-18 11 18-5 0 11 20z"/>
+    <path d="m332 164 13-23-6 0 13-22 13 22-6 0 13 23z"/>
+    <path d="m374 163 10-18-5 0 11-19 11 19-5 0 10 18z"/>
+    <path d="m438 165 9-17-4 0 10-17 10 17-5 0 9 17z"/>
+    <path d="m479 165 12-21-5 0 12-20 12 20-5 0 12 21z"/>
+    <path d="m548 165 9-17-4 0 10-17 10 17-5 0 9 17z"/>
+    <path d="m516 165 10-18-5 0 11-19 11 19-5 0 10 18z"/>
+    <path d="m632 165 9-17-4 0 10-17 10 17-5 0 9 17z"/>
+    <path d="m656 166 12-22-6 0 12-20 12 20-6 0 12 22z"/>
+    <path d="m695 165 10-19-5 0 11-18 11 18-5 0 10 19z"/>
+    <path d="m719 165 9-17-4 0 10-17 10 17-5 0 9 17z"/>
+    <path d="m737 165 13-23-6 0 13-21 13 21-6 0 13 23z"/>
+    <path d="m781 166 10-18-5 0 11-19 11 19-5 0 10 18z"/>
+    <path d="m821 166 12-22-6 0 12-20 12 20-6 0 12 22z"/>
+    <path d="m858 166 9-17-4 0 10-17 10 17-5 0 9 17z"/>
+  </g>
+  <path d="M180 190q320-33 640 0v112q-320 42-640 0z" fill="url(#wordFade)"/>
+  <g font-family="Arial, Helvetica, sans-serif" text-anchor="middle" font-style="italic" font-weight="900">
+    <text x="500" y="264" fill="#10264a" stroke="#e4f1f7" stroke-width="2" stroke-opacity=".85" paint-order="stroke" font-size="76" letter-spacing="3">REDDI</text>
+    <text x="500" y="303" fill="#e05236" font-size="34" letter-spacing="12">TOWING</text>
+  </g>
+  <path d="M103 327q95-18 190 0t190 0 190 0 190 0 34 0v32q-95 20-190 0t-190 0-190 0-190 0-34 0z" fill="url(#river)"/>
+  <path d="M143 332q73-10 146 0t146 0 146 0 146 0 130 0" fill="none" stroke="#e0f6fc" stroke-opacity=".85" stroke-width="3.5" stroke-linecap="round"/>
+</svg>

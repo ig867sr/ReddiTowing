@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 240" role="img" aria-labelledby="title description">
+  <title id="title">Reddi Towing — Gorge Road</title>
+  <desc id="description">A clean road ribbon winds between angular Gorge cliffs and flows into a recovery hook.</desc>
+  <g transform="translate(24 28)">
+    <path d="M15 163V78l47-55 33 42 29-31 50 59v70z" fill="#152744"/>
+    <path d="m49 78 13-15 17 20-14-6-7 8zM106 75l18-20 25 30-19-8-11 10z" fill="#dce8f5"/>
+    <path d="M23 148c47-42 73 20 119-19 16-14 27-35 42-49" fill="none" stroke="#fff" stroke-width="14" stroke-linecap="round"/>
+    <path d="M23 148c47-42 73 20 119-19 16-14 27-35 42-49" fill="none" stroke="#d84438" stroke-width="4" stroke-linecap="round" stroke-dasharray="4 10"/>
+    <path d="m183 80 7-25c3-10 11-16 22-16 13 0 22 9 22 21 0 11-7 18-17 18-7 0-12-5-12-11" fill="none" stroke="#f4b740" stroke-width="9" stroke-linecap="round"/>
+    <path d="M16 166h193" stroke="#4a9aac" stroke-width="8" stroke-linecap="round"/>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="315" y="107" fill="#152744" font-size="83" font-weight="900" letter-spacing="-5">REDDI</text>
+    <text x="321" y="165" fill="#d84438" font-size="46" font-weight="900" letter-spacing="8">TOWING</text>
+    <text x="323" y="202" fill="#526078" font-size="16" font-weight="700" letter-spacing="3">24/7 ROADSIDE · TOWING · RECOVERY</text>
+  </g>
+</svg>

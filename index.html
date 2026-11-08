@@ -2,162 +2,530 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Reddi Towing - Towing and roadside services in Carson, WA and the Columbia River Gorge.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reddi Towing, Inc. | Carson, WA</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="24/7 towing and roadside service in Carson, WA and the Columbia River Gorge. Call Reddi Towing at (509) 427-8111.">
+    <meta name="theme-color" content="#14264a">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Reddi Towing | Carson, WA">
+    <meta property="og:description" content="24/7 towing and roadside service in Carson, WA and the Columbia River Gorge.">
+    <meta property="og:url" content="https://www.redditow.com/">
+    <meta property="og:image" content="https://www.redditow.com/images/ThreeTrucks.jpg">
+    <title>Reddi Towing | 24/7 Roadside Service in Carson, WA</title>
+    <link rel="canonical" href="https://www.redditow.com/">
     <style>
+        :root {
+            color-scheme: light;
+            --navy: #14264a;
+            --navy-dark: #0c1932;
+            --blue: #253f73;
+            --gold: #ffc247;
+            --paper: #f5f6f8;
+            --ink: #1d2738;
+            --muted: #596579;
+            --white: #fff;
+            --content-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 1.5rem;
+        }
+
         body {
-            font-family: 'Roboto', Arial, sans-serif;
             margin: 0;
-            background: #f7f7f7;
-            color: #222;
+            background: var(--paper);
+            color: var(--ink);
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
         }
-        header {
-            background: #1a237e;
-            color: #fff;
-            padding: 2rem 1rem 1rem 1rem;
+
+        a {
+            color: inherit;
+        }
+
+        a:focus-visible {
+            outline: 3px solid var(--gold);
+            outline-offset: 4px;
+        }
+
+        .emergency-banner {
+            padding: 0.55rem 1rem;
+            background: var(--gold);
+            color: var(--navy-dark);
+            font-size: 0.85rem;
+            font-weight: 800;
+            letter-spacing: 0.08em;
             text-align: center;
+            text-transform: uppercase;
         }
-        header img {
-            max-width: 220px;
-            margin-bottom: 1rem;
+
+        .site-header {
+            background: var(--navy);
+            color: var(--white);
         }
-        h1 {
-            margin: 0.5rem 0 0 0;
-            font-size: 2rem;
-            font-weight: 700;
+
+        .header-inner {
+            display: flex;
+            width: min(100% - 3rem, var(--content-width));
+            min-height: 112px;
+            margin: 0 auto;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
         }
-        .contact {
-            background: #fff;
-            margin: 1.5rem auto 1rem auto;
-            padding: 1.5rem;
-            border-radius: 8px;
-            max-width: 500px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-            text-align: center;
+
+        .brand {
+            display: inline-flex;
+            flex: 0 0 auto;
+            align-items: center;
         }
-        .contact a {
-            color: #1a237e;
-            text-decoration: none;
-            font-weight: 700;
-        }
-        .contact a:hover {
-            text-decoration: underline;
-        }
-        .main-image {
+
+        .brand img {
             display: block;
-            margin: 1.5rem auto;
-            max-width: 95vw;
-            width: 500px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            width: 250px;
+            height: auto;
         }
-        .services {
-            max-width: 900px;
-            margin: 2rem auto;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-            padding: 2rem 1rem;
+
+        .header-details {
+            display: flex;
+            flex: 1;
+            align-items: center;
+            justify-content: flex-end;
+            gap: clamp(1.25rem, 3vw, 3rem);
         }
-        .services h2 {
-            text-align: center;
-            color: #1a237e;
-            margin-bottom: 1.5rem;
+
+        .header-detail {
+            display: grid;
+            gap: 0.1rem;
         }
-        .service-list {
+
+        .header-label {
+            color: #d3ddf0;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .header-detail a {
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .header-detail a:hover {
+            text-decoration: underline;
+            text-underline-offset: 0.2em;
+        }
+
+        .header-phone {
+            color: var(--gold);
+            font-size: 1.2rem;
+        }
+
+        .header-address {
+            font-size: 0.92rem;
+        }
+
+        .hero {
+            background: var(--navy-dark);
+            color: var(--white);
+        }
+
+        .hero-inner {
+            display: grid;
+            width: min(100%, 1500px);
+            min-height: 490px;
+            margin: 0 auto;
+            grid-template-columns: minmax(340px, 0.82fr) minmax(0, 1.18fr);
+        }
+
+        .hero-copy {
+            display: flex;
+            padding: clamp(2.5rem, 6vw, 5.5rem) clamp(2rem, 6vw, 5rem);
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+        }
+
+        .eyebrow {
+            margin: 0 0 0.75rem;
+            color: var(--gold);
+            font-size: 0.8rem;
+            font-weight: 800;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            max-width: 11ch;
+            margin: 0;
+            font-size: clamp(2.5rem, 4.7vw, 4.5rem);
+            letter-spacing: -0.045em;
+            line-height: 1.04;
+        }
+
+        .hero-description {
+            max-width: 36rem;
+            margin: 1.25rem 0 1.75rem;
+            color: #e0e6f0;
+            font-size: clamp(1rem, 1.5vw, 1.15rem);
+        }
+
+        .button {
+            display: inline-flex;
+            min-height: 48px;
+            padding: 0.8rem 1.2rem;
+            align-items: center;
+            justify-content: center;
+            border: 0;
+            border-radius: 0.35rem;
+            background: var(--gold);
+            color: var(--navy-dark);
+            font-weight: 800;
+            text-decoration: none;
+            transition: background-color 150ms ease, transform 150ms ease;
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+            background: #ffd372;
+        }
+
+        .hero-actions {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
+            gap: 0.75rem;
+        }
+
+        .button-secondary {
+            border: 1px solid rgb(255 255 255 / 55%);
+            background: transparent;
+            color: var(--white);
+        }
+
+        .button-secondary:hover {
+            background: rgb(255 255 255 / 12%);
+        }
+
+        .hero-image-wrap {
+            min-width: 0;
+            min-height: 490px;
+            overflow: hidden;
+            background: var(--blue);
+        }
+
+        .hero-image {
+            display: block;
+            width: 100%;
+            height: 100%;
+            min-height: 490px;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .section {
+            width: min(100% - 3rem, var(--content-width));
+            margin: 0 auto;
+            padding: clamp(3rem, 7vw, 5.5rem) 0;
+        }
+
+        .section-heading {
+            max-width: 700px;
+            margin-bottom: 2rem;
+        }
+
+        .section-heading .eyebrow {
+            color: var(--blue);
+        }
+
+        .section-heading h2 {
+            margin: 0;
+            color: var(--navy);
+            font-size: clamp(2rem, 3.5vw, 3rem);
+            letter-spacing: -0.035em;
+            line-height: 1.12;
+        }
+
+        .section-heading p {
+            margin: 0.85rem 0 0;
+            color: var(--muted);
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1rem;
+        }
+
+        .service-card {
+            padding: clamp(1.35rem, 2.5vw, 2rem);
+            border: 1px solid #e3e7ed;
+            border-top: 4px solid var(--gold);
+            border-radius: 0.5rem;
+            background: var(--white);
+            box-shadow: 0 10px 28px rgb(20 38 74 / 5%);
+        }
+
+        .service-card h3 {
+            margin: 0 0 0.9rem;
+            color: var(--navy);
+            font-size: 1.25rem;
+        }
+
+        .service-card ul {
+            display: grid;
+            margin: 0;
+            padding: 0;
+            gap: 0.65rem;
+            list-style: none;
+        }
+
+        .service-card li {
+            position: relative;
+            padding-left: 1.2rem;
+            color: var(--muted);
+        }
+
+        .service-card li::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: #23734b;
+            content: "✓";
+            font-weight: 800;
+        }
+
+        .contact-band {
+            background: #e9edf4;
+        }
+
+        .contact-inner {
+            display: flex;
+            width: min(100% - 3rem, var(--content-width));
+            margin: 0 auto;
+            padding: 1.5rem 0;
+            align-items: center;
+            justify-content: space-between;
             gap: 1.5rem;
         }
-        .service-col {
-            flex: 1 1 220px;
-            min-width: 220px;
+
+        .contact-copy strong {
+            display: block;
+            color: var(--navy);
+            font-size: 1.2rem;
         }
-        .service-col ul {
-            list-style: none;
-            padding: 0;
+
+        .contact-copy span {
+            color: var(--muted);
         }
-        .service-col li {
-            font-size: 1.1rem;
-            margin-bottom: 0.7rem;
-            padding-left: 1.2em;
-            position: relative;
-        }
-        .service-col li:before {
-            content: "✔";
-            color: #388e3c;
-            position: absolute;
-            left: 0;
-        }
-        footer {
+
+        .site-footer {
+            padding: 1.5rem;
+            background: var(--navy-dark);
+            color: #d3ddf0;
+            font-size: 0.9rem;
             text-align: center;
-            color: #888;
-            font-size: 0.95rem;
-            margin: 2rem 0 1rem 0;
         }
-        @media (max-width: 700px) {
-            .services {
-                padding: 1rem 0.5rem;
-            }
-            .service-list {
+
+        .site-footer p {
+            margin: 0.25rem;
+        }
+
+        .site-footer a {
+            color: var(--white);
+        }
+
+        @media (max-width: 760px) {
+            .header-inner {
+                width: min(100% - 2rem, var(--content-width));
+                min-height: auto;
+                padding: 1rem 0;
                 flex-direction: column;
-                gap: 0.5rem;
+                align-items: stretch;
+                gap: 1rem;
+            }
+
+            .brand {
+                align-self: flex-start;
+            }
+
+            .brand img {
+                width: min(250px, 72vw);
+            }
+
+            .header-details {
+                align-items: flex-start;
+                flex-direction: column;
+                justify-content: flex-start;
+                gap: 0.75rem;
+            }
+
+            .header-phone {
+                font-size: 1.05rem;
+            }
+
+            .header-address {
+                font-size: 0.85rem;
+            }
+
+            .hero-inner {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-copy {
+                padding: 2.5rem 1.5rem;
+            }
+
+            .hero h1 {
+                max-width: 14ch;
+                font-size: clamp(2.5rem, 11vw, 4rem);
+            }
+
+            .hero-image-wrap,
+            .hero-image {
+                min-height: 0;
+                height: clamp(250px, 62vw, 390px);
+            }
+
+            .hero-image {
+                object-position: center 56%;
+            }
+
+            .section,
+            .contact-inner {
+                width: min(100% - 2rem, var(--content-width));
+            }
+
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-inner {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 380px) {
+            .emergency-banner {
+                font-size: 0.75rem;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                transition-duration: 0.01ms !important;
             }
         }
     </style>
 </head>
 <body>
-    <header>
-        <img src="/images/Logo.png" alt="Reddi Towing Logo">
-        <h1>Reddi Towing, Inc.</h1>
-        <div>Specializing in Lockouts and Roadside Service<br>Carson, WA & Columbia River Gorge</div>
+    <div class="emergency-banner">24/7 Emergency Towing &amp; Roadside Service</div>
+
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="/" aria-label="Reddi Towing home">
+                <img src="assets/logos/option-3-flatbed.svg" alt="Reddi Towing — Columbia River Gorge">
+            </a>
+            <div class="header-details">
+                <div class="header-detail">
+                    <span class="header-label">Call anytime</span>
+                    <a class="header-phone" href="tel:+15094278111">(509) 427-8111</a>
+                </div>
+                <div class="header-detail">
+                    <span class="header-label">Find us in Carson</span>
+                    <a class="header-address" href="https://www.google.com/maps/place/Reddi+Towing,+Inc./@45.7418671,-121.8239796,719m/data=!3m2!1e3!4b1!4m6!3m5!1s0x5495df975b6a4b83:0xe40e7537ccb2651c!8m2!3d45.7418671!4d-121.8214047!16s%2Fg%2F11cffrfhz?entry=ttu&amp;g_ep=EgoyMDI2MTEwMy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">
+                        71 Carson Frontage Rd<br>Carson, WA 98610
+                    </a>
+                </div>
+            </div>
+        </div>
     </header>
-    <div class="contact">
-        <div style="font-size:1.3rem; margin-bottom:0.5rem;">
-            <a href="mailto:redditowinginc@embarqmail.com?subject=Found you on your website">Email Us</a>
-        </div>
-        <div style="font-size:1.5rem; font-weight:700;">
-            <a href="tel:5094278111">(509) 427-8111</a>
-        </div>
-        <div style="margin-top:0.5rem; color:#555;">
-            24/7 Emergency Service
-        </div>
-    </div>
-    <img class="main-image" src="/images/ThreeTrucks.jpg" alt="Reddi Towing Trucks">
-    <section class="services">
-        <h2>Our Services</h2>
-        <div class="service-list">
-            <div class="service-col">
-                <ul>
-                    <li>Lockouts (Damage-Free!)</li>
-                    <li>Accident Removal</li>
-                    <li>Flat Tire Changes</li>
-                    <li>On and Off Road Winching</li>
-                    <li>Motorcycle Towing</li>
-                    <li>Off Road Recovery</li>
-                    <li>Jump Starts</li>
-                    <li>Full Service Shop for Mechanical Repairs</li>
-                </ul>
+
+    <main>
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-inner">
+                <div class="hero-copy">
+                    <p class="eyebrow">Carson, Washington · Columbia River Gorge</p>
+                    <h1 id="hero-title">Need a hand? We’re on the way.</h1>
+                    <p class="hero-description">From lockouts and flat tires to towing and recovery, call your local crew for roadside help, day or night.</p>
+                    <div class="hero-actions">
+                        <a class="button" href="tel:+15094278111">Call now · (509) 427-8111</a>
+                        <a class="button button-secondary" href="mailto:redditowinginc@embarqmail.com?subject=Website%20inquiry">Email us</a>
+                    </div>
+                </div>
+                <div class="hero-image-wrap">
+                    <img class="hero-image" src="/images/ThreeTrucks.jpg" alt="Reddi Towing trucks ready to help" fetchpriority="high">
+                </div>
             </div>
-            <div class="service-col">
-                <ul>
-                    <li>Overheat</li>
-                    <li>Out of Gas Service</li>
-                    <li>Welding and Fabrication</li>
-                    <li>24 hr Flatbed Service</li>
-                    <li>Secure Storage</li>
-                    <li>Auto Theft Recovery</li>
-                    <li>Battery Installation (w/Disposal)</li>
-                    <li>Damage Free Equipment</li>
-                </ul>
+        </section>
+
+        <section class="section" id="services" aria-labelledby="services-title">
+            <div class="section-heading">
+                <p class="eyebrow">How we can help</p>
+                <h2 id="services-title">Roadside help for the unexpected.</h2>
+                <p>Local towing, recovery, roadside assistance, and shop services for Carson and the Columbia River Gorge.</p>
             </div>
-        </div>
-    </section>
-    <footer>
-        &copy; 2026 Reddi Towing, Inc. | Carson, WA | Serving the Columbia River Gorge
+
+            <div class="service-grid">
+                <article class="service-card">
+                    <h3>Towing &amp; recovery</h3>
+                    <ul>
+                        <li>Accident removal</li>
+                        <li>24-hour flatbed service</li>
+                        <li>Motorcycle towing</li>
+                        <li>On- and off-road winching</li>
+                        <li>Off-road recovery</li>
+                        <li>Secure storage</li>
+                        <li>Auto theft recovery</li>
+                    </ul>
+                </article>
+                <article class="service-card">
+                    <h3>Roadside assistance</h3>
+                    <ul>
+                        <li>Damage-free lockouts</li>
+                        <li>Flat tire changes</li>
+                        <li>Jump starts</li>
+                        <li>Overheating assistance</li>
+                        <li>Out-of-gas service</li>
+                        <li>Battery installation and disposal</li>
+                    </ul>
+                </article>
+                <article class="service-card">
+                    <h3>Shop &amp; equipment</h3>
+                    <ul>
+                        <li>Full-service mechanical repairs</li>
+                        <li>Welding and fabrication</li>
+                        <li>Damage-free equipment</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section class="contact-band" aria-label="Contact Reddi Towing">
+            <div class="contact-inner">
+                <div class="contact-copy">
+                    <strong>Need help on the road?</strong>
+                    <span>We’re available 24/7 for emergency service.</span>
+                </div>
+                <a class="button" href="tel:+15094278111">Call (509) 427-8111</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p><strong>Reddi Towing, Inc.</strong> · Carson, WA · Serving the Columbia River Gorge</p>
+        <p><a href="https://www.google.com/maps/place/Reddi+Towing,+Inc./@45.7418671,-121.8239796,719m/data=!3m2!1e3!4b1!4m6!3m5!1s0x5495df975b6a4b83:0xe40e7537ccb2651c!8m2!3d45.7418671!4d-121.8214047!16s%2Fg%2F11cffrfhz?entry=ttu&amp;g_ep=EgoyMDI2MTEwMy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">71 Carson Frontage Rd, Carson, WA 98610</a></p>
     </footer>
 </body>
 </html>

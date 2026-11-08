@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 240" role="img" aria-labelledby="title description">
+  <title id="title">Reddi Towing — River Hook</title>
+  <desc id="description">A simple custom river bend that turns into a recovery hook beside the Reddi Towing wordmark.</desc>
+  <g transform="translate(28 29)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 43c78 0 78 90 156 90" stroke="#4a9aac" stroke-width="19"/>
+    <path d="M172 133c23 0 36-14 36-35V34" stroke="#d84438" stroke-width="16"/>
+    <path d="M208 34v-5c0-16 12-27 28-27 15 0 27 10 27 25 0 14-9 22-21 22-9 0-16-6-16-15" stroke="#152744" stroke-width="11"/>
+    <path d="M32 79c25 15 51 15 76 0" stroke="#fff" stroke-width="5"/>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="325" y="108" fill="#152744" font-size="83" font-weight="900" letter-spacing="-5">REDDI</text>
+    <text x="331" y="165" fill="#d84438" font-size="46" font-weight="900" letter-spacing="8">TOWING</text>
+    <text x="333" y="202" fill="#526078" font-size="16" font-weight="700" letter-spacing="3">CARSON · STEVENSON · HOOD RIVER</text>
+  </g>
+</svg>
